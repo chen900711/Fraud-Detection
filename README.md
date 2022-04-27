@@ -1,6 +1,6 @@
 # Fraud-Detection
 ### Credit Card Fraud Detection
-In this project, we are using SQL skills to analyze historical credit card transactions and consumption patterns in order to identify possible fraudulent transactions.
+In this project, we are using SQL skills to analyze 3500 historical credit card transactions and consumption patterns in order to identify possible fraudulent transactions.
 
 ### Data Modeling:
 First of all, we created on MySQL a database schemas called frauddetectingproject, then imported five CSV data files to MySQL. Then, we created Queries and Views according to the consumption patterns.
@@ -20,6 +20,9 @@ According to transaction amount, some fraudsters hack a credit card by making se
    2. What are the top five merchants prone to being hacked using small transactions?
 
 Once we have a query that can be reused, we will create a view for each of the previous queries. Then, we will analyze our findings to verify our consumption patterns.
+
+### Results
+According to our consumption patterns, we narrow down the total 3500 transactions to 600 suspicious transactions. We got 419 transactions in the time frame 7 to 9 am and 181 small amount transactions. According to those suspicious transactions, we got the 5 top hacked merchants with number of small transactions.
 
 ### Improvement
 In the future, we could detecting fraud transactions according to two main sections client's background and consumption habits. In the client's background, we should analyze the suspicious transaction according to client's age, education background, position, location, and gender. In the client's consumption habits, we need to consider the client's shopping area, stores, and time. Based on those two sections, we could create some grading system to detect and flag the suspicious transactions to verified with client.
