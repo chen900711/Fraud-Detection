@@ -14,7 +14,7 @@ ORDER BY ch.name;
 SELECT * 
 FROM transaction AS tr
 WHERE extract(hour from date) >=7
-AND extract (hour from date) <=9
+AND extract(hour from date) <=9
 ORDER BY amount DESC
 LIMIT 100;
 
@@ -55,11 +55,15 @@ JOIN merchant_category AS mc on mc.id = m.id_merchant_category
 ORDER BY ch.name;
 
 CREATE VIEW morning_higher_transactions AS
+SELECT ch.name, tr.card, tr.date, tr.amount, m.name AS merchant,
+		mc.name AS category
 FROM transaction AS tr
 JOIN credit_card AS cc on tr.card = cc.card
 JOIN card_holder AS ch on cc.id_card_holder = ch.id
 JOIN merchant AS m on m.id = tr.id_merchant
 JOIN merchant_category AS mc on mc.id = m.id_merchant_category
+WHERE extract(hour from date) >=7 
+AND extract(hour from date) <=9
 ORDER BY ch.name;
 
 CREATE VIEW micro_transactions AS
