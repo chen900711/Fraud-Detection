@@ -3,7 +3,7 @@
 In this project, we are using SQL skills to analyze historical credit card transactions and consumption patterns in order to identify possible fraudulent transactions.
 
 ### Data Modeling:
-First of all, we created on MySQL a database called frauddetectingproject, then imported five CSV data files to MySQL. Then, we created some Views according to the consumption patterns.
+First of all, we created on MySQL a database schemas called frauddetectingproject, then imported five CSV data files to MySQL. Then, we created Queries and Views according to the consumption patterns.
 
 ### Data Engineering:
 We created a database schema on MySQL and imported our database from the CSV files provided. Using our database model as a blueprint, we created a database schema for each of our tables and relationships. We specified data types, primary keys and foreign keys. After creating the database schema, we imported the data from the corresponding CSV files.
